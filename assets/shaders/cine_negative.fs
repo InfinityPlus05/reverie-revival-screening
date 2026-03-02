@@ -117,9 +117,9 @@ vec4 shine_effect( vec4 colour, vec4 tex, vec2 uv, vec2 texture_coords ){
     tex.b = tex.b-delta + delta*maxfac*0.7 - 0.1;
     tex.a = tex.a*(0.5*max(min(1., max(0.,0.3*max(low*0.2, delta)+ min(max(maxfac*0.1,0.), 0.4)) ), 0.) + 0.15*maxfac*(0.1+delta));
 
-    tex.r = orig_rgba.r * (1 - tex.a) + tex.r * tex.a;
-    tex.g = orig_rgba.g * (1 - tex.a) + tex.g * tex.a;
-    tex.b = orig_rgba.b * (1 - tex.a) + tex.b * tex.a;
+    tex.r = orig_rgba.r * (1. - tex.a) + tex.r * tex.a;
+    tex.g = orig_rgba.g * (1. - tex.a) + tex.g * tex.a;
+    tex.b = orig_rgba.b * (1. - tex.a) + tex.b * tex.a;
     tex.a = orig_rgba.a;
 
     return dissolve_mask(tex*colour, texture_coords, uv);
@@ -133,9 +133,9 @@ vec4 effect( vec4 colour, Image texture, vec2 texture_coords, vec2 screen_coords
     float omit_top_half = cine_negative[2];
     float omit_bottom_half = cine_negative[3];
 
-    if (uv.y <= 0.375 && omit_top_half > 0){
+    if (uv.y <= 0.375 && omit_top_half > 0.){
         tex.a = 0.;
-    } else if (uv.y > 0.375 && omit_bottom_half > 0) {
+    } else if (uv.y > 0.375 && omit_bottom_half > 0.) {
         tex.a = 0.;
     }
 
@@ -153,9 +153,9 @@ vec4 effect( vec4 colour, Image texture, vec2 texture_coords, vec2 screen_coords
 	if (tex[3] < 0.7)
 		tex[3] = tex[3]/3.;
 
-    tex.r = orig_rgba.r * (1 - tex.a) + tex.r * tex.a;
-    tex.g = orig_rgba.g * (1 - tex.a) + tex.g * tex.a;
-    tex.b = orig_rgba.b * (1 - tex.a) + tex.b * tex.a;
+    tex.r = orig_rgba.r * (1. - tex.a) + tex.r * tex.a;
+    tex.g = orig_rgba.g * (1. - tex.a) + tex.g * tex.a;
+    tex.b = orig_rgba.b * (1. - tex.a) + tex.b * tex.a;
     tex.a = orig_rgba.a;
 
 	return shine_effect(colour, tex, uv, texture_coords);
