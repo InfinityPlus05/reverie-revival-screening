@@ -102,9 +102,9 @@ vec4 effect( vec4 colour, Image texture, vec2 texture_coords, vec2 screen_coords
     float omit_top_half = ticket_polychrome[2];
     float omit_bottom_half = ticket_polychrome[3];
 
-    if (uv.y <= 0.375 && omit_top_half > 0){
+    if (uv.y <= 0.375 && omit_top_half > 0.){
         tex.a = 0.;
-    } else if (uv.y > 0.375 && omit_bottom_half > 0) {
+    } else if (uv.y > 0.375 && omit_bottom_half > 0.) {
         tex.a = 0.;
     }
 
@@ -150,9 +150,9 @@ vec4 effect( vec4 colour, Image texture, vec2 texture_coords, vec2 screen_coords
     if (tex[3] < 0.7)
         tex[3] = tex[3]/3.;
 
-    tex.r = orig_rgba.r * (1 - tex.a) + tex.r * tex.a;
-    tex.g = orig_rgba.g * (1 - tex.a) + tex.g * tex.a;
-    tex.b = orig_rgba.b * (1 - tex.a) + tex.b * tex.a;
+    tex.r = orig_rgba.r * (1. - tex.a) + tex.r * tex.a;
+    tex.g = orig_rgba.g * (1. - tex.a) + tex.g * tex.a;
+    tex.b = orig_rgba.b * (1. - tex.a) + tex.b * tex.a;
     tex.a = orig_rgba.a;
     
 	return dissolve_mask(tex*colour, texture_coords, uv);
