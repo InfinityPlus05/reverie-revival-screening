@@ -1,9 +1,9 @@
 <div align="center">
-  <img src="https://dvrp-balatro-mods.pages.dev/images/logos/reverie/3.png" style="width: 400px; margin-bottom: 1rem;" />
+  <img src="https://i.imgur.com/ZnmLhx6.png" style="width: 400px; margin-bottom: 1rem;" />
 
-  # Reverie 🎥
+  # Reverie: Revival Screening
 
-  A movie-themed [Balatro](https://store.steampowered.com/app/2379780/Balatro/) expansion that focuses on providing special shops and various contents around it
+  An expansion on the movie-themed [Balatro](https://store.steampowered.com/app/2379780/Balatro/) expansion, seeking to add more content make cross-mod content easier
 
-  [![GitHub release (latest by date)](https://img.shields.io/github/v/release/jumbocarrot0/reverie)](https://github.com/jumbocarrot0/reverie/releases)
+  [![GitHub release (latest by date)](https://img.shields.io/github/v/release/InfinityPlus05/reverie-revival-screening)](https://github.com/InfinityPlus05/reverie-revival-screening/releases)
 </div>
