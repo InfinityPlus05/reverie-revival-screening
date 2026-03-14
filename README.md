@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://i.imgur.com/JcwXSv5.png" style="width: 400px; margin-bottom: 1rem;" />
+  <img src="https://i.imgur.com/C1W27zO.png" style="width: 400px; margin-bottom: 1rem;" />
 
   # Reverie: Revival Screening
 
