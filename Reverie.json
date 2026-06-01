@@ -1,11 +1,11 @@
 {
     "id": "Reverie",
     "name": "Reverie",
-    "author": ["DVRP"],
-    "description": "A movie-themed expansion that focuses on providing special shops and various contents around it",
+    "author": ["DVRP, jumbocarrot0, InfinityPlus05"],
+    "description": "A continuation of the movie-themed expansion about providing special shops",
     "badge_colour": "9db95f",
-    "version": "1.5.4c",
-    "prefix": "dvrprv",
+    "version": "0.0.1",
+    "prefix": "reverieRS",
     "main_file": "Reverie.lua",
     "priority": 1,
 	"dependencies": [
